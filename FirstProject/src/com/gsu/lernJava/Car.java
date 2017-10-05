@@ -5,7 +5,7 @@ public class Car extends Auto {
     private float fuelConsumption;
     private int accelerationTime;
 
-    public Car(){};
+    public Car(){}
 
     public Car(String carModel, String engineType, int enginePower, int mass, float mileage) {
         super(carModel, engineType, enginePower, mass, mileage);

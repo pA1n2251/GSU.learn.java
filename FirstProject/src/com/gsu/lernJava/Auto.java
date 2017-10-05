@@ -7,7 +7,7 @@ abstract public class Auto {
     private int mass;
     private float mileage;
 
-    public Auto(){};
+    public Auto(){}
 
     public Auto(String carModel, String engineType, int enginePower) {
         this.carModel = carModel;

@@ -19,7 +19,7 @@ public class Truck extends Auto {
 
     @Override
     public String toString() {
-        return "Truck{" +
+        return super.toString() + "Truck{" +
                 "carrying=" + carrying +
                 ", bodyType='" + bodyType + '\'' +
                 '}';

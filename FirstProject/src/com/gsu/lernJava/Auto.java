@@ -1,6 +1,6 @@
 package com.gsu.lernJava;
 
-abstract public class Auto {
+public class Auto {
     private String carModel;
     private String engineType;
     private int enginePower;
@@ -43,7 +43,9 @@ abstract public class Auto {
         return mileage;
     }
 
-    abstract public void model();
+    public void model() {
+        System.out.println("This is the Auto\n");
+    }
 
     @Override
     public String toString() {

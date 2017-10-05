@@ -17,9 +17,8 @@ public class Bus extends Auto{
 
     @Override
     public String toString() {
-        return super.toString() + "Bus{" +
-                "seats=" + seats +
-                '}';
+        return super.toString() +
+                "\nSeats = " + seats;
     }
 
     @Override

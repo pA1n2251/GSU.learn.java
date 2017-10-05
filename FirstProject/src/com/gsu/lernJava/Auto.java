@@ -49,12 +49,10 @@ public class Auto {
 
     @Override
     public String toString() {
-        return "Auto{" +
-                "Car model = '" + carModel + '\'' +
-                ", engine type='" + engineType + '\'' +
-                ", engine power=" + enginePower +
-                ", mass=" + mass +
-                ", mileage=" + mileage +
-                '}';
+        return  "Car model = " + carModel +
+                ", \nEngine type = " + engineType +
+                ", \nEngine power = " + enginePower +
+                ", \nMass = " + mass +
+                ", \nMileage = " + mileage;
     }
 }

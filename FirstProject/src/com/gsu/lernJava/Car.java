@@ -19,10 +19,9 @@ public class Car extends Auto {
 
     @Override
     public String toString() {
-        return super.toString() + "Car{" +
-                "Fuel consumption=" + fuelConsumption +
-                ", acceleration time=" + accelerationTime +
-                '}';
+        return super.toString() +
+                "\nFuel consumption = " + fuelConsumption +
+                ", \nAcceleration time = " + accelerationTime;
     }
 
     @Override

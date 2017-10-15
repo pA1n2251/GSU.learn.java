@@ -1,17 +1,19 @@
 package com.gsu.lernJava;
 
-public class Computer {
+import java.io.Serializable;
+
+public class Computer implements Serializable{
 
     private float cpuFrequency;
     private int ram;
-    private String videoCard;
-    private float productivity = cpuFrequency*100;
+    private float videoCard;
+    private float productivity ;
 
-    public Computer(float cpuFrequency, int ram, String videoCard, float productivity) {
+    public Computer(float cpuFrequency, int ram, float videoCard) {
         this.cpuFrequency = cpuFrequency;
         this.ram = ram;
         this.videoCard = videoCard;
-        this.productivity = productivity;
+        this.productivity = cpuFrequency*100;
     }
 
     public void setCpuFrequency(float cpuFrequency) {
@@ -22,7 +24,7 @@ public class Computer {
         this.ram = ram;
     }
 
-    public void setVideoCard(String videoCard) {
+    public void setVideoCard(float videoCard) {
         this.videoCard = videoCard;
     }
 
@@ -38,7 +40,7 @@ public class Computer {
         return ram;
     }
 
-    public String getVideoCard() {
+    public float getVideoCard() {
         return videoCard;
     }
 

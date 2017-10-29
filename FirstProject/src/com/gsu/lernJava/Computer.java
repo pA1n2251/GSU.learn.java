@@ -13,7 +13,7 @@ public class Computer implements Serializable{
         this.cpuFrequency = cpuFrequency;
         this.ram = ram;
         this.videoCard = videoCard;
-        this.productivity = cpuFrequency*100;
+        this.productivity = 0;
     }
 
     public void setCpuFrequency(float cpuFrequency) {
@@ -44,12 +44,24 @@ public class Computer implements Serializable{
         return videoCard;
     }
 
-    public float getProductivity() {
-        return productivity;
+    public float getProductivity() throws ComputerPerformanceException{
+        if (cpuFrequency <=0 || ram <=0 || videoCard <=0){
+            throw new ComputerPerformanceException("CPU/RAM/Video cannot equal to/below zero!");
+        }
+        return productivity*cpuFrequency*ram*videoCard;
     }
+
 
     @Override
     public String toString() {
+        float productivity = 0;
+        try {
+            productivity = getProductivity();
+        } catch (ComputerPerformanceException e){
+            e.printStackTrace();
+            System.exit(1);
+
+        }
         return "Computer:\n" +
                 "Cpu frequency = " + cpuFrequency +
                 "\nRAM = " + ram +

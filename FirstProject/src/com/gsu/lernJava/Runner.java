@@ -27,9 +27,9 @@ public class Runner {
 
         try (ObjectOutputStream oo = new ObjectOutputStream(new FileOutputStream(file))) {
             for (Computer comp: list)
-                System.out.println(comp.toString());
+                System.out.println(comp);
             oo.writeObject(list);
-            oo.flush();  
+            oo.flush();
         } catch (IOException ex) {
             ex.printStackTrace();
         }

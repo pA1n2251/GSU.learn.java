@@ -23,16 +23,13 @@ public class Runner {
             list.add(temp);
         }
 
-        File file = new File("D:\\"+File.separator + "files" + File.separator + "Computer.bin");
+        File file = new File("src"+ File.separator + "Computer.bin");
 
-        try {
-            FileOutputStream fo = new FileOutputStream(file);
-            ObjectOutputStream oo = new ObjectOutputStream(fo);
+        try (ObjectOutputStream oo = new ObjectOutputStream(new FileOutputStream(file))) {
             for (Computer comp: list)
                 System.out.println(comp.toString());
             oo.writeObject(list);
-            oo.flush();
-            oo.close();
+            oo.flush();  
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -40,15 +37,12 @@ public class Runner {
         System.out.println("Data has been recorded!");
         System.out.println("Reading...");
 
-        try {
-            FileInputStream fi = new FileInputStream(file);
-            ObjectInputStream oi = new ObjectInputStream(fi);
+        try (ObjectInputStream oi = new ObjectInputStream(new FileInputStream(file))){
             System.out.println("New list created");
             ArrayList<Computer> list2 = (ArrayList<Computer>)oi.readObject();
             for (int i = 0; i < counter; i++) {
-                System.out.println(list2.get(i).toString());
+                System.out.println(list2.get(i));
             }
-            oi.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         } catch (ClassNotFoundException ex) {

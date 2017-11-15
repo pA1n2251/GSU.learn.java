@@ -1,0 +1,4 @@
+Brand: Aborka Capacity: 32 Average running time: 23 Maintenance costs: 23.0
+Brand: Lg Capacity: 15 Average running time: 15 Maintenance costs: 15.0
+Brand: Nikon Capacity: 41 Average running time: 84 Maintenance costs: 12.3
+Brand: Samsung Capacity: 20 Average running time: 20 Maintenance costs: 20.0

@@ -57,8 +57,8 @@ public class Kettle implements Serializable, Comparable<Kettle> {
     @Override
     public String toString() {
         return "Brand: " + brand +
-                "\nCapacity: " + capacity +
-                "\nAverage running time: " + averageRunningTime +
-                "\nMaintenance costs: " + maintenanceCosts;
+                " Capacity: " + capacity +
+                " Average running time: " + averageRunningTime +
+                " Maintenance costs: " + maintenanceCosts;
     }
 }

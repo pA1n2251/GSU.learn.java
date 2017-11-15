@@ -12,7 +12,7 @@ public class Runner {
             BufferedReader input = new BufferedReader(new FileReader("src"+File.separator+"kettle_input.txt"));
             String line = null;
             while ((line = input.readLine()) != null) {
-                String[] atbs = line.split(";");
+                String[] atbs = line.split(" ");
                 Kettle temp = new Kettle(atbs[0], Integer.parseInt(atbs[1]), Integer.parseInt(atbs[2]), Double.parseDouble(atbs[3]));
                 list.add(temp);
             }

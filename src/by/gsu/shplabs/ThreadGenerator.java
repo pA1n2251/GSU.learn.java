@@ -39,7 +39,7 @@ public class ThreadGenerator {
     private Action action = Action.ADD;
     private CalculatorThread[] threads;
 
-    public void execute(CalculatorThread[] threads){
+    public void execute(){
         threads = new CalculatorThread[NUMBER_OF_THREADS];
         for (int i = 0; i<threads.length; i++){
             threads[i] = new CalculatorThread();

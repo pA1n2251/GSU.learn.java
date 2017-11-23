@@ -73,3 +73,10 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.idea/GSU.learn.java.iml
+.idea/artifacts/
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+strings1.iml

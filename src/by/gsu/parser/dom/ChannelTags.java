@@ -28,6 +28,12 @@ public enum ChannelTags {
             channel.setLanguage(node.getTextContent());
         }
     },
+    TTL("ttl"){
+        @Override
+        protected void parseTag(Channel channel, Node node) {
+            channel.setTtl(node.getTextContent());
+        }
+    },
     ITEM("item") {
         @Override
         protected void parseTag(Channel channel, Node node) {

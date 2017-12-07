@@ -67,4 +67,16 @@ public class Item {
     public void setPubDate(String pubDate) {
         this.pubDate = pubDate;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", guId='" + guId + '\'' +
+                ", pubDate='" + pubDate + '\'' +
+                "}\n";
+    }
 }

@@ -4,6 +4,7 @@ import java.util.LinkedList;
 
 public class Channel {
     private String title;
+    private String link;
     private String description;
     private String language;
     private String ttl;
@@ -59,5 +60,25 @@ public class Channel {
 
     public void setItems(LinkedList<Item> items) {
         this.items = items;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    @Override
+    public String toString() {
+        return "Channel{" +
+                "title='" + title + '\'' +
+                ", link='" + link + '\'' +
+                ", description='" + description + '\'' +
+                ", language='" + language + '\'' +
+                ", ttl='" + ttl + '\'' +
+                ", items=" + items +
+                '}';
     }
 }
